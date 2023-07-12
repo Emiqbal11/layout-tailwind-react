@@ -3,6 +3,8 @@ import "./App.css";
 import logo from "./assets/image/logo.svg";
 import intro from "./assets/image/illustration-intro.svg";
 import avatar from "./assets/image/avatar-anisha.png";
+import logoWhite from "./assets/image/logo-white.svg";
+import fbIcons from "./assets/image/icon-facebook.svg";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -283,6 +285,68 @@ function App() {
           </div>
         </div>
       </section>
+      {/* footer  */}
+      <footer className="bg-blue-950">
+        <div className="flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+          {/* logo and social login div  */}
+          <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:spac-y-0 md:items-start">
+            {/* logo  */}
+            <div>
+              <img src={logoWhite} className="h-8" alt="" />
+            </div>
+            {/* social link container  */}
+            <div className="flex justify-center space-x-4">
+              {/* link 1 */}
+              <a href="#">
+                <img src={fbIcons} alt="" className="h-8" />
+              </a>
+              <a href="#">
+                <img src={fbIcons} alt="" className="h-8" />
+              </a>
+              <a href="#">
+                <img src={fbIcons} alt="" className="h-8" />
+              </a>
+              <a href="#">
+                <img src={fbIcons} alt="" className="h-8" />
+              </a>
+              <a href="#">
+                <img src={fbIcons} alt="" className="h-8" />
+              </a>
+            </div>
+          </div>
+          {/* list container  */}
+          <div className="flex justify-around space-x-32">
+            <div className="flex flex-col space-y-3 text-white">
+              <a href="#" className="hover:text-brightRed">
+                Home
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                Pricing
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                Products
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                About
+              </a>
+            </div>
+            <div className="flex flex-col space-y-3 text-white">
+              <a href="#" className="hover:text-brightRed">
+                Careers
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                Community
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-brightRed">
+                About
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
