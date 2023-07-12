@@ -47,6 +47,29 @@ function App() {
           >
             Get Started
           </a>
+
+          {/* humberger menu  */}
+          <button
+            id="menu-btn"
+            className="block hamburger md:hidden focus:outline-none"
+          >
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>{" "}
+            <span className="hamburger-bottom"></span>
+          </button>
+        </div>
+        {/* mobile menu  */}
+        <div className="md:hidden">
+          <div
+            id="menu"
+            className="absolute flex  flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md "
+          >
+            <a href="#">Pricing</a>
+            <a href="#">Product</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Community</a>
+          </div>
         </div>
       </nav>
       {/* hero section  */}
@@ -269,7 +292,7 @@ function App() {
         </div>
       </section>
       {/* cta section  */}
-      <section id="CTA" className="bg-red-500">
+      <section id="cta" className="bg-red-500">
         <div className="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0">
           {/* heading  */}
           <h2 className="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
@@ -287,11 +310,14 @@ function App() {
       </section>
       {/* footer  */}
       <footer className="bg-blue-950">
-        <div className="flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
-          {/* logo and social login div  */}
-          <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:spac-y-0 md:items-start">
+        <div className="flex flex-col-reverse justify-between px-6 py-8 mx-auto space-y-8 md:flex-row md:space-y-0">
+          {/* logo and social login container  */}
+          <div className="mx-auto my-6 text-center text-white md:hidden">
+            Copyright &copy; 2022,All Rights Reserved
+          </div>
+          <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
             {/* logo  */}
-            <div>
+            <div className="my-4">
               <img src={logoWhite} className="h-8" alt="" />
             </div>
             {/* social link container  */}
@@ -340,9 +366,24 @@ function App() {
               <a href="#" className="hover:text-brightRed">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-brightRed">
-                About
-              </a>
+            </div>
+          </div>
+          {/* input container  */}
+          <div className="flex flex-col justify-between">
+            <form>
+              <div className="flex space-x-3">
+                <input
+                  type="text"
+                  className="flex-1 px-4 rounded-full focus::outline-none"
+                  placeholder="update in your inbox"
+                />
+                <button className="px-4 py-2 text-white rounded-full bg-brightRed hover:bg-brightRed focus:outline-none">
+                  Go
+                </button>
+              </div>
+            </form>
+            <div className="hidden text-white md:block">
+              Copyright &copy;2022,All Rights Reserved
             </div>
           </div>
         </div>
